@@ -1,0 +1,38 @@
+#!/usr/bin/env python3 scripts/combine_text_modules.py
+
+# The 'simplified' system has the following features:
+# - the output is a dict (this is more structured than a TSV)
+# - each rule is output in a single line (no references created)
+# - the input is only the snippet from which the rules are extracted
+# - there is no distinction between [C] and [V] rules
+#   instead reference_type can be "Value" or "OtherGroup"
+
+- modules/roles.yaml: 1
+- modules/tasks.yaml: 3
+- |
+  # Definitions
+
+  The following definitions must be respected when extracting expectations from the input text.
+- modules/entities.yaml-: group_compact
+- modules/values.yaml!!!: group_types
+- modules/entities.yaml-: unit_compact
+- modules/values.yaml!!!: unit_types
+- modules/entities.yaml-: attribute_compact
+- modules/values.yaml!!!: modes
+- modules/entities.yaml-: expectation
+- modules/values.yaml!!!: operators
+- |
+  # Output format
+- modules/output_format.yaml: simplified
+- modules/rules.yaml: svc_multiunits
+- |
+  # Rules regarding the output
+
+  You must ALWAYS obey to the following rules.
+  If any of the rule is not obeyed to, the entire output is not valid!
+- modules/rules.yaml#: [level, presence, one_unit_no_array, region_whole_genome, nodot]
+- |
+  # Wrong output examples
+- modules/bad_values.yaml: intro1
+- modules/bad_values.yaml#: [reference_more, copiotroph_type, magneto_type, ref_unspec, group_noname, group_dot]
+- modules/input_intro.yaml: 2
