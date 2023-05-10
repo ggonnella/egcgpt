@@ -4,8 +4,24 @@ intro1: "DO NOT use values like the following in the output!:"
 ref_value_more: |
                 "ref_value": "more"
                 # WRONG: ref_value must be an absolute quantity
+reference_more: |
+                "reference": "more"
+                # WRONG: reference must be an absolute quantity or a second group of organisms to compare to
 copiotroph_type: |
   'group_name': 'Copiotroph',
   'group_type': 'biological_interaction',
   # WRONG: 'Copiotroph' is not a kind of biological interaction
-
+magneto_type: |
+  "group_name": "magnetotactic bacteria",
+  "group_type": "habitat",
+  # WRONG: the type is 'taxis'
+group_noname: |
+  "group_name": "strain" or "this string"
+  # WRONG: 'strain' is not a name of a specific group (it is a type of group)
+  # HINT: skip this strain, and check if rules regarding any other group can be derived instead from the text
+group_dot: |
+  "group_name": '.'
+  # WRONG: '.' is not a name of a group
+ref_unspec: |
+  "reference": "not specified",
+  # WRONG: the reference must be a quantity or name of a comparison organisms group

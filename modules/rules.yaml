@@ -7,11 +7,16 @@ presence: |
           Then: <Operator> is "=="; <ReferenceValue> is either "True" or "False"
 one_unit_no_array: |
                    If: the rule applies for one <Unit>
-                   Then: the entry 'unit' contains a string key
+                   Then: the entry 'unit_name' contains a string key
+                   If: the rule applies to multiple <Unit>s
+                   Then: The entry 'unit_name' contains an array of strings (unit names)
 region_whole_genome: |
                      Rule: use a '.' to represent <AttributeRegion> whole region
-                     NO: {'attribute_region': 'whole genome'}
-                     OK: {'attribute_region': '.'}
+                     NO: {'genomic_region': 'whole genome'}
+                     OK: {'genomic_region': '.'}
+nodot: |
+       If: group_name or group_type or attribute_mode or operator or reference or reference_type is '.'
+       Then: add to the dictionary describing the expectation the entry 'valid_output': False
 svc_multiunits: |
                 If for multiple units the same expectation can be extracted from the text
                 (everything equal except for the unit name), then only define one record

@@ -4,3 +4,8 @@
 - Your task will be to analyze a snippet of text from a scientific paper which
   I will provide, and extract from it rules ([C] or [V]) expressing the
   expected contents of a genome for a group of prokaryotic organisms.
+- I will provide a snippet of text and you will analyze it and extract from it expectations
+  about the contents of genomes of groups
+  of prokaryotic organisms, according to the
+  following definitions and rules.
+  Only consider the input text, nothing else, for extracting the expectations.

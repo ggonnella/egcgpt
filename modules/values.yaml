@@ -21,7 +21,7 @@ unit_types: |
               (2) gene_homolog: homologs of a gene, mentioned by its name
               (3) specific_protein: a protein, mentioned by its name
               (4) protein_homolog: homologs of a protein, mentioned by its name
-              (5) family: protein family, sometimes described, sometimes given as InterPro, Pfam, Pfam clan, etc
+              (5) family: protein or gene family, sometimes described, sometimes given as InterPro, Pfam, Pfam clan, etc
               (6) domain: proteins containing a specific domain, sometimes given as CDD, etc.
               (7) ortholog_group: gene ortholog group, e.g. COG, eggNOG, or named group of ortholog genes
               (8) feature_type: e.g. gene, CRISPR, repeat

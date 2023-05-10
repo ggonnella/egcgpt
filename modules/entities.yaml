@@ -73,19 +73,27 @@ group_compact: |
                     <GroupType>: type of characteristic which defines the group, i.e. common to all members of the group (e.g. taxonomy)
 unit_compact: |
               [U]: unit of genome content; genome feature, set of genome features or product of genome features
-                   <UnitName>: how the genome content unit is called in the text
+                   <UnitName>: how the genome content unit is called in the text, including identifiers and symbols;
                    <UnitType>: type of the genome content unit (e.g. specific_protein)
 attribute_compact: |
                    [A]: attribute; something that can be measured, by observing a [U] (e.g. count, presence, etc) in the genome or part of it.
                         <AttributeUnit>: which [U] is observed (<UnitName>, <UnitType>)
-                        <AttributeRegion>: In most cases: 'whole genome' -> output as a dot, '.';
-                                  In a few cases, one of:
+                        <AttributeRegion>: part of the genome where [U] is observed;
+                                 In most cases: 'whole genome';
+                                 When specified in the text:
                                     (1) molecule type (e.g. 'plasmid', 'chromosome')
                                     (2) name of molecule (e.g. 'plasmid p57')
                                     (3) feature type (e.g. 'ORFs', 'RNA genes')
                         <AttributeMode>: mode of measurement
-                        <AttributeRelativeTo>: if mode != 'relative': (most cases) not set -> output as a dot, '.';
+                        <AttributeRelativeTo>:
+                                      if mode != 'relative': (most cases) not set -> output as a dot, '.';
                                       if mode == 'relative': the count is relative to this [U]
+expectation: |
+  [E] expectation; based on the input text; how the [A] <Attribute> in genomes of organisms [G] <Group>
+      compares to <Reference>;
+      <Operator>: comparison operator, see possible values below
+      <Reference>: either a numerical value (e.g. 2), a quantitative expression (e.g. 'high level'),
+                   or a [G] to compare to (e.g. 'other Bacteria').
 vrule_compact: |
                [V]: value expectation; expectation, based on the input text, on how the value of [A] <Attribute>
                     in genomes of organisms in [G] <Group> compare to a reference value <ReferenceValue>

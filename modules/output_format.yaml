@@ -129,4 +129,19 @@ svc_dict_s_given: |
                 "group_quant": <GroupQuantifier> for [G] <Group>}
                 "operator": <Operator>,
                 "ref_value": <ReferenceValue>}
+simplified: |
+         Each line defines one expectation.
+         Output the expectation as Python dictionaries with the following entries (line first char is '{', line last char is '}').
+               {
+                "unit_name": <UnitName> of [U] <Unit> of [A] <Attribute>,
+                "unit_type": <UnitType> of [U] <Unit> of [A] <Attribute>,
+                "attribute_mode":<AttributeMode> of [A] <Attribute>,
+                "genomic_region": <AttributeRegion> of [A] <Attribute>,
+                "group_name": <GroupName> of [G] <Group>,
+                "group_type": <GroupType> of [G] <Group>,
+                "operator": <Operator>,
+                "reference": <Reference>,
+                "reference_type": type of <Reference>, "group" or "value"}
+         Nothing else is output, no explanations, no comments.
+
 
