@@ -12,7 +12,8 @@
 - |
   # Definitions
 
-  The following definitions must be respected when extracting expectations from the input text.
+  The following definitions must be respected when extracting expectations from
+  the input text.
 - modules/entities.yaml-: group_compact
 - modules/values.yaml!!!: group_types
 - modules/entities.yaml-: unit_compact
@@ -30,9 +31,11 @@
 
   You must ALWAYS obey to the following rules.
   If any of the rule is not obeyed to, the entire output is not valid!
-- modules/rules.yaml#: [level, presence, one_unit_no_array, region_whole_genome, nodot]
+- modules/rules.yaml#: [level, presence, one_unit_no_array,
+                        region_whole_genome, nodot]
 - |
   # Wrong output examples
 - modules/bad_values.yaml: intro1
-- modules/bad_values.yaml#: [reference_more, copiotroph_type, magneto_type, ref_unspec, group_noname, group_dot]
+- modules/bad_values.yaml#: [reference_more, copiotroph_type, magneto_type,
+                             ref_unspec, group_noname, group_dot, unit_dot]
 - modules/input_intro.yaml: 2

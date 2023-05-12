@@ -25,3 +25,6 @@ group_dot: |
 ref_unspec: |
   "reference": "not specified",
   # WRONG: the reference must be a quantity or name of a comparison organisms group
+unit_dot: |
+  "unit_name": "."
+  # WRONG: "." is not a name of a unit
