@@ -1,0 +1,34 @@
+"valid":
+  an assessment if the following 16 conditions:
+    (1) __GROUPNAME__ is not "." and not empty
+    (2) __UNITNAME__ is not "." and not empty
+    (3) __GROUPTYPE__ is one of the 8 group types mentioned above
+    (4) __UNITTYPE__ is one of the 13 unit types mentioned above
+    (5) __MODE__ is one of the 3 modes mentioned above
+    (6) __COMPARISONOPERATOR__ is one of the 14 operators mentioned above
+    (7) __REFERENCETYPE__ is either "group" or "value"
+    (8) if __REFERENCETYPE__ is "group", then __REFERENCEDATA__ is a group name
+    (9) if __REFERENCETYPE__ is "value", then __REFERENCEDATA__ is a numeric value,
+        a range of values, a boolean or a word expressing a quantitative level;
+        __REFERENCEDATA__ is not another kind of word
+    (10) if __MODE__ is "presence", then __REFERENCETYPE__ is "value",
+        the operator is "==" and __REFERENCEVALUE__ is either "True" or "False"
+    (11) if __MODE__ is "count" or "length", then __REFERENCEVALUE__s
+         is not a boolean
+    (12) if __COMPARISONOPERATOR__ is "<>" or "><", then __REFERENCETYPE__ is "value"
+         and __REFERENCEVALUE__ is a pair of numeric values expressing the range limits
+    (13) if __COMPARISONOPERATOR__ is not "<>" or "><",
+         then __REFERENCEVALUE__ is not a pair of numeric values
+    (14) if __COMPARISONOPERATOR__ is "$", then __REFERENCETYPE__ is "value" and
+         then __REFERENCEVALUE__ is a word expressing quantitative level, such as
+         high or low
+    (15) if __COMPARISONOPERATOR__ is not "$", then __REFERENCEVALUE__ is not a word expressing 
+         a quantitative level
+    (16) __REASON__ is concise and does not contain formulations suchg as "in the text",
+    "in the input text", "the text implies that" or similar
+  __VALID__ is an array of 16 "true" or "false" values.
+  Check each of the conditions above and use "true" in __VALID__ for it, if and only
+  if the condition is true, and "false" otherwise. Your goal is that "rule"
+    shall be so formulated that "valid" contains only "true" values, but
+    the assessment of valid is very important
+  and shall always be earnest.

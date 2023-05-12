@@ -1,0 +1,9 @@
+The output is paginated if too long. This is done if there are more than
+3 rules which can be implied from the input text. In this case the output
+will be at first ``[{'pages': __NPAGES__}]``, where __NPAGES__ is the
+number of pages (i.e. the ceil of the number of rules divided by 3).
+The user will then write "next page" and you will give the normal output,
+but with only rules 1 to 3. The user will then write "next page" and you will
+give the normal output, with rules 4 to 6. This will be repeated until
+all rules have been output.
+
