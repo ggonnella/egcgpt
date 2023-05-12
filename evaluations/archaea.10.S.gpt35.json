@@ -1,0 +1,673 @@
+{
+  "SA13": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Thermoproteaceae",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "RNaseP or signal recognition particle (7S RNA)",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Genes encoding the stable RNA components of RNaseP or the signal recognition particle (7S RNA) are absent in most Thermoproteaceae.",
+          "quality": "poor",
+          "rule_id": "VA22",
+          "errors": ["wrong_content_def", "missing_quantifier"],
+          "notes": {"wrong_content_def": "the text mentions genes for the 'stable RNA components of RNase P...', so 'RNase P...' is wrong",
+                    "missing_quantifier": "'most' was not included in the answer"}
+        }
+      }
+    ],
+    "counts": {
+      "poor": 1
+    }
+  },
+  "SA18": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Haloarchaeal genomes",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "inteins",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Haloarchaeal genomes are known to harbor inteins.",
+          "quality": "good",
+          "rule_id": "VA32",
+          "errors": ["incorrect_content_type"],
+          "notes": {"incorrect_content_type": "inteins are not genes, but a feature type"}
+        }
+      }
+    ],
+    "counts": {
+      "good": 1
+    }
+  },
+  "SA26": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "AOA",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "archaeal amoA gene",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "AOA possess the archaeal amoA gene, which codes for the α-subunit of ammonia monooxygenase, the key enzyme responsible for ammonia oxidation.",
+          "quality": "excellent",
+          "rule_id": "VA44",
+          "notes": {"content_name": "archaeal is not necessary, but also not wrong"}
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "AOA",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "abundance",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "count",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 0
+            }
+          }
+        },
+        "metadata": {
+          "explain": "AOA occur with great abundances in sites such as marine environments and acidic soils.",
+          "quality": "junk",
+          "errors": ["invalid_content_def", "wrong_content_type"]
+        }
+      }
+    ],
+    "counts": {
+      "excellent": 1,
+      "new_wrong": 1
+    }
+  },
+  "SA27": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Nitrososphaera viennensis, Ca. Nitrososphaera gargensis, Ca. Cenarchaeum symbiosum",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "urease and urea transporter gene",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Strains such as Nitrososphaera viennensis, Ca. Nitrososphaera gargensis, and Ca. Cenarchaeum symbiosum possess urease and urea transporter genes in their genome.",
+          "quality": "good",
+          "errors": ["multi_group_def", "multi_content_def"]
+        }
+      }
+    ],
+    "counts": {
+      "good_joined": 2
+    }
+  },
+  "SA36": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Thermococcales",
+            "type": "taxon",
+            "quantifier": "most members of"
+          },
+          "content": {
+            "name": "MBH and SH genes",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 1
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Most members of the Thermococcales contain genes encoding at least one MBH (multisubunit [NiFe]-hydrogenase) and one SH (supercomplex of hydrogenase).",
+          "quality": "fair",
+          "rule_id": ["VA69", "VA71"],
+          "errors": ["incorrect_mode", "multi_content_def"],
+          "notes": {"incorrect_mode": "measurement mode should be count, if comparison is >= 1"}
+        }
+      }
+    ],
+    "counts": {
+      "fair_joined": 2
+    }
+  },
+  "SA48": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "N. maritimus",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "gene",
+            "type": "."
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "group",
+              "data": "C. symbiosum"
+            }
+          }
+        },
+        "metadata": {
+          "explain": "All genes implicated in the 3-hydroxyproprionate/4-hydrobutyrate pathway for carbon assimilation in N. maritimus are present and show highest similarity to the genes of C. symbiosum.",
+          "quality": "junk",
+          "rule_id": null,
+          "errors": ["invalid_content_def", "invalid_comparison"],
+          "notes": {"invalid_content_def": "gene of type '.'",
+                    "invalid_comparison": "'presence' mode is used despite the fact that reference type is a group"}
+        }
+      }
+    ],
+    "counts": {
+      "new_wrong": 1,
+      "missing": 2
+    }
+  },
+  "SA59": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "haloarchaea",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "enzyme",
+            "type": "PHA synthase"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 1
+            }
+          }
+        },
+        "metadata": {
+          "explain": "PHA synthases (PhaEC) have been characterized in haloarchaea.",
+          "quality": "poor",
+          "errors": ["wrong_comparison", "wrong_content_def"],
+          "notes": {"wrong_content_def": "content type and name switched",
+                    "wrong_comparison": "presence requires the operator == and a boolean value"},
+          "rule_id": ["VA108", "VA132"]
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "haloarchaea",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "enzyme",
+            "type": "PHA-specific acetoacetyl-CoA reductase"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 1
+            }
+          }
+        },
+        "metadata": {
+          "explain": "PHA-specific acetoacetyl-CoA reductases (PhaB) have been characterized in haloarchaea.",
+          "quality": "poor",
+          "errors": ["wrong_comparison", "wrong_content_def"],
+          "notes": {"wrong_content_def": "content name and content type switched",
+                    "wrong_comparison": "presence requires the operator == and a boolean value"},
+          "rule_id": "VA120"
+        }
+      }
+    ],
+    "counts": {
+      "poor_joined": 2,
+      "poor": 1
+    }
+  },
+  "SA72": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Halorubrum lacusprofundi",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "genome sequence",
+            "type": "genome feature"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The genome sequence of Halorubrum lacusprofundi has been established.",
+          "quality": "junk",
+          "rule_id": null,
+          "errors": ["invalid_content_def"]
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Halorubrum lacusprofundi",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "G + C-content",
+            "type": "genome feature"
+          },
+          "measurement": {
+            "mode": "value",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 0.5
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Halorubrum lacusprofundi has a high G + C-content in its genome.",
+          "quality": "fair",
+          "errors": ["incorrect_value"],
+          "rule_id": "VA178",
+          "notes": {"incorrect_value": "specific value (0.5) not stated in the text, but reasonable"}
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Halorubrum lacusprofundi",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "extrachromosomal replicons",
+            "type": "genome feature"
+          },
+          "measurement": {
+            "mode": "count",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 1
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Halorubrum lacusprofundi has large extrachromosomal replicons in its genome.",
+          "quality": "good",
+          "rule_id": "VA297",
+          "errors": ["unknown_content_type"],
+          "notes": {"unknown_content_type": "feature_type would be correct"}
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Halorubrum lacusprofundi",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "DNA replication genes",
+            "type": "genome feature"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 1
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Halorubrum lacusprofundi has eukaryotic-like DNA replication genes in its genome.",
+          "quality": "poor",
+          "errors": ["wrong_content_def", "wrong_comparison"],
+          "notes": {"wrong_content_def": "eukaryotic-like is missing",
+                    "wrong_content_type": "content type 'genome feature' is not one of the allowed ones, and is wrong",
+                    "wrong_comparison": "presence mode cannot be used with the comparison >= 1"},
+          "rule_id": "VA299"
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Halorubrum lacusprofundi",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "transcription genes",
+            "type": "genome feature"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 1
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Halorubrum lacusprofundi has eukaryotic-like transcription genes in its genome.",
+          "quality": "poor",
+          "errors": ["wrong_content_def", "wrong_comparison"],
+          "notes": {"wrong_content_def": "eukaryotic-like is missing",
+                    "wrong_content_type": "content type 'genome feature' is not one of the allowed ones, and is wrong",
+                    "wrong_comparison": "presence mode cannot be used with the comparison >= 1"},
+          "rule_id": "VA301"
+        }
+      }
+    ],
+    "counts": {
+      "new_wrong": 1,
+      "fair": 1,
+      "good": 1,
+      "poor": 2,
+      "missing": 6
+    }
+  },
+  "SA78": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Pa. pacificus",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "saccharolytic gene island",
+            "type": "gene_cluster"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Pa. pacificus does not contain the saccharolytic gene island.",
+          "quality": "good",
+          "rule_id": "VA185",
+          "errors": ["incorrect_content_type"],
+          "notes": {"incorrect_content_type": "gene island is not a cluster"}
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Pa. pacificus",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "maltose and trehalose degradation gene",
+            "type": "gene_cluster"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Pa. pacificus does not contain the maltose and trehalose degradation gene.",
+          "quality": "good",
+          "rule_id": "VA191",
+          "errors": ["incorrect_content_type"],
+          "notes": {"incorrect_content_type": "not stated in input that these are a gene cluster"}
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Thermococcus species",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "saccharolytic gene island",
+            "type": "gene_cluster"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Thermococcus species do not contain the saccharolytic gene island.",
+          "quality": "poor",
+          "rule_id": "VA187",
+          "errors": ["incorrect_content_type", "wrong_group_def"],
+          "notes": {"wrong_group_def": "it lacks conveying the information that sibiricus is not included",
+                    "incorrect_content_type": "gene island is not a cluster"}
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Thermococcus sibiricus",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "saccharolytic gene island",
+            "type": "gene_cluster"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Thermococcus sibiricus contains the saccharolytic gene island.",
+          "quality": "good",
+          "rule_id": "VA186",
+          "errors": ["incorrect_content_type"],
+          "notes": {"incorrect_content_type": "gene island is not a cluster"}
+        }
+      }
+    ],
+    "counts": {
+      "good": 3,
+      "poor": 1,
+      "missing": 4
+    }
+  },
+  "SA79": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Pa. pacificus",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "mobile genetic elements",
+            "type": "gene_cluster"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Pa. pacificus genome lacks mobile genetic elements including transposons, transposases, integrases, and virus-related regions.",
+          "quality": "good",
+          "errors": ["incorrect_content_type"],
+          "rule_id": "VA194",
+          "notes": {"incorrect_content_type": "MGE are not a gene cluster"}
+        }
+      }
+    ],
+    "counts": {
+      "good": 1
+    }
+  }
+}
