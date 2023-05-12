@@ -1,0 +1,344 @@
+[
+  {
+    "rule":
+    {
+      "group": {"name": "Gram-positive bacteria", "type": "taxon", "quantifier": "."},
+      "content": {"name": "dlt operon", "type": "operon"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "dlt operon is present in Gram-positive bacteria",
+      "input": "S42",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "Rickettsia", "type": "taxon", "quantifier": "."},
+      "content": {"name": "ompB", "type": "gene"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "ompB is conserved in all Rickettsia genomes",
+      "input": "S57",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "Rickettsia", "type": "taxon", "quantifier": "."},
+      "content": {"name": "sca4", "type": "gene"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "sca4 is conserved in all Rickettsia genomes",
+      "input": "S57",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "vibrios", "type": "taxon", "quantifier": "."},
+      "content": {"name": "tRNA genes", "type": "feature_type"},
+      "measurement": {"mode": "count", "region": "."},
+      "expectation": {"operator": ">=", "reference": {"type": "value", "data": 106}}
+    },
+    "metadata":
+    {
+      "explain": "The number of tRNA genes in vibrios is quite high, similar to 106 genes",
+      "input": "S72",
+      "correct": false,
+      "note": "in common with vibrios is not 106 but the fact that the count is high"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "Photobacterium profundum", "type": "taxon", "quantifier": "."},
+      "content": {"name": "tRNA genes", "type": "feature_type"},
+      "measurement": {"mode": "count", "region": "."},
+      "expectation": {"operator": ">=", "reference": {"type": "value", "data": 106}}
+    },
+    "metadata":
+    {
+      "explain": "The number of tRNA genes in Photobacterium profundum is quite high, similar to 106 genes",
+      "input": "S72",
+      "correct": false,
+      "note": "in common with P.profundum is not 106 but the fact that the count is high"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "Borrelia", "type": "taxon", "quantifier": "."},
+      "content": {"name": "Pfam32", "type": "protein"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "Pfam32 protein, homologous to ParA, is found in the segmented Borrelia genome",
+      "input": "S82",
+      "correct": true,
+      "note": "partially true, since Pfam32 is not a protein, it is a protein family"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "Borrelia", "type": "taxon", "quantifier": "."},
+      "content": {"name": "Pfam49", "type": "protein"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "Pfam49 protein is found in the Borrelia genome and is unique to this genus",
+      "input": "S82",
+      "correct": true,
+      "note": "partially true, since Pfam49 is not a protein, it is a protein family"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "LD species", "type": "taxon", "quantifier": "."},
+      "content": {"name": "OspA (bba15)", "type": "gene"},
+      "measurement": {"mode": "presence", "region": "lp54 plasmids"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "OspA (bba15) gene is present in the lp54 plasmids of LD species",
+      "input": "S85",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "LD species", "type": "taxon", "quantifier": "."},
+      "content": {"name": "OspB (bba16)", "type": "gene"},
+      "measurement": {"mode": "presence", "region": "lp54 plasmids"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "OspB (bba16) gene is present in the lp54 plasmids of LD species",
+      "input": "S85",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "LD species", "type": "taxon", "quantifier": "."},
+      "content": {"name": "DbpA (bba24)", "type": "gene"},
+      "measurement": {"mode": "presence", "region": "lp54 plasmids"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "DbpA (bba24) gene is present in the lp54 plasmids of LD species",
+      "input": "S85",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "LD species", "type": "taxon", "quantifier": "."},
+      "content": {"name": "DbpB (bba25)", "type": "gene"},
+      "measurement": {"mode": "presence", "region": "lp54 plasmids"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "DbpB (bba25) gene is present in the lp54 plasmids of LD species",
+      "input": "S85",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "blaNMC-A/IMI-type genes", "type": "gene", "quantifier": "."},
+      "content": {"name": "Enterobacter", "type": "taxon"},
+      "measurement": {"mode": "presence"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "blaNMC-A/IMI-type genes are found in Enterobacter",
+      "input": "S152",
+      "correct": false,
+      "note": "too general and false without a quantifier"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "blaNMC-A/IMI-type genes", "type": "gene", "quantifier": "."},
+      "content": {"name": "E. coli", "type": "taxon"},
+      "measurement": {"mode": "presence", "region": "pIMI-5"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+    },
+    "metadata":
+    {
+      "explain": "blaNMC-A/IMI-type genes are not found in the pIMI-5 of E. coli",
+      "input": "S152",
+      "correct": false,
+      "note": "pIMI-5 actually contains blaIMI-type genes"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "type III PKSs", "type": "gene", "quantifier": "various"},
+      "content": {"name": "Streptomyces", "type": "taxon"},
+      "measurement": {"mode": "presence"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "Type III PKSs are widely distributed in Streptomyces",
+      "input": "S155",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "type III PKSs", "type": "gene", "quantifier": "various"},
+      "content": {"name": "bacteria", "type": "taxon"},
+      "measurement": {"mode": "presence"},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "Type III PKSs are widely distributed in various bacteria",
+      "input": "S155",
+      "correct": true,
+      "note": "not included in manually curated dataset, since very generic"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "pseudogenes", "type": "gene", "quantifier": "large"},
+      "content": {"name": "O. arcticus", "type": "taxon"},
+      "measurement": {"mode": "quantity", "value": 411},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": 411}}
+    },
+    "metadata":
+    {
+      "explain": "Octadecabacter arcticus has an unusually large number of pseudogenes, 411.",
+      "input": "S171",
+      "correct": true,
+      "note": "not included in manually curated dataset, since referring to a single species"
+    }
+  },
+  {
+    "rule":
+    {
+      "group": {"name": "pseudogenes", "type": "gene", "quantifier": "large"},
+      "content": {"name": "O. antarcticus", "type": "taxon"},
+      "measurement": {"mode": "quantity", "value": 361},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": 361}}
+    },
+    "metadata":
+    {
+      "explain": "Octadecabacter antarcticus has an unusually large number of pseudogenes, 361.",
+      "input": "S171",
+      "correct": true,
+      "note": "not included in manually curated dataset, since referring to a single species"
+    }
+  },
+  {
+    "rule":
+    {
+      "group":       {"name": "N. defluvii", "type": "taxon", "quantifier": "."},
+      "content":     {"name": "SOD", "type": "protein"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+    },
+    "metadata":
+    {
+      "explain": "N. defluvii lacks SOD",
+      "input": "S181",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group":       {"name": "N. defluvii", "type": "taxon", "quantifier": "."},
+      "content":     {"name": "catalase", "type": "protein"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+    },
+    "metadata":
+    {
+      "explain": "N. defluvii lacks catalase",
+      "input": "S181",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group":       {"name": "N. defluvii", "type": "taxon", "quantifier": "."},
+      "content":     {"name": "superoxide reductase", "type": "protein"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+    },
+    "metadata":
+    {
+      "explain": "N. defluvii does not code for superoxide reductase",
+      "input": "S181",
+      "correct": true
+    }
+  },
+  {
+    "rule":
+    {
+      "group":       {"name": "Enterobacteriaceae", "type": "taxon", "quantifier": "."},
+      "content":     {"name": "IMP-type metallo-β-lactamases", "type": "family"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "IMP-type metallo-β-lactamases are among the most common families of acquired carbapenemases detected from Enterobacteriaceae",
+      "input": "S184",
+      "correct": false,
+      "note": "not correct without a quantifier"
+    }
+  },
+  {
+    "rule":
+    {
+      "group":       {"name": "Enterobacteriaceae in East Asia, including Japan", "type": "location", "quantifier": "."},
+      "content":     {"name": "IMP-type metallo-β-lactamases", "type": "family"},
+      "measurement": {"mode": "presence", "region": "."},
+      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+    },
+    "metadata":
+    {
+      "explain": "IMP-type metallo-β-lactamases have been reported mainly in Enterobacteriaceae from East Asia, including Japan",
+      "input": "S184",
+      "correct": false,
+      "note": "not correct without a quantifier"
+    }
+  }
+]
+
