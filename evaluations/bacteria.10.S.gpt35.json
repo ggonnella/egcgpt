@@ -1,685 +1,750 @@
-[
-  {
-    "rule": {
-      "group": {
-        "name": "Gram-positive bacteria",
-        "type": "taxon",
-        "quantifier": "."
+{
+  "S42": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Gram-positive bacteria",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "dlt operon",
+            "type": "operon"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The dlt operon is present in the genomes of Gram-positive bacteria.",
+          "input": "S42",
+          "correct": true
+        }
       },
-      "content": {
-        "name": "dlt operon",
-        "type": "operon"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
+      {
+        "rule": {
+          "group": {
+            "name": "dlt operon",
+            "type": "operon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "PFAM motifs",
+            "type": "domain"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 1
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Proteins in the dlt operon of Gram-positive bacteria contain PFAM motifs.",
+          "input": "S42",
+          "correct": false,
+          "note": "PFAM motifs is not a domain; in fact it is too generic to have a rule from it"
         }
       }
-    },
-    "metadata": {
-      "explain": "The dlt operon is present in the genomes of Gram-positive bacteria.",
-      "input": "S42",
-      "correct": true
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "dlt operon",
-        "type": "operon",
-        "quantifier": "."
+  "S57": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Rickettsia genomes",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "ompB",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The ompB gene is conserved in all available Rickettsia genomes.",
+          "input": "S57",
+          "correct": null
+        }
       },
-      "content": {
-        "name": "PFAM motifs",
-        "type": "domain"
+      {
+        "rule": {
+          "group": {
+            "name": "Rickettsia genomes",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "sca4",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The sca4 gene is conserved in all available Rickettsia genomes.",
+          "input": "S57",
+          "correct": true
+        }
       },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": ">=",
-        "reference": {
-          "type": "value",
-          "data": 1
+      {
+        "rule": {
+          "group": {
+            "name": "Rickettsia genomes",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "remaining members",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The remaining members of the Rickettsia genomes are degraded or absent in one or more species.",
+          "input": "S57",
+          "correct": false,
+          "note": "remaining members is not a gene"
         }
       }
-    },
-    "metadata": {
-      "explain": "Proteins in the dlt operon of Gram-positive bacteria contain PFAM motifs.",
-      "input": "S42",
-      "correct": false,
-      "note": "PFAM motifs is not a domain; in fact it is too generic to have a rule from it"
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "Rickettsia genomes",
-        "type": "taxon",
-        "quantifier": "."
+  "S72": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "N. defluvii",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "tRNA genes",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "count",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 106
+            }
+          }
+        },
+        "metadata": {
+          "explain": "N. defluvii has a high number of tRNA genes (106 genes), similar to vibrios and Photobacterium profundum.",
+          "input": "S72",
+          "correct": false,
+          "note": "N. defluvii was not mentioned in the input text"
+        }
       },
-      "content": {
-        "name": "ompB",
-        "type": "gene"
+      {
+        "rule": {
+          "group": {
+            "name": "N. defluvii",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "longest run of tRNA genes",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "count",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 19
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The longest run of tRNA genes in N. defluvii contains at least 19 tRNA genes in a row.",
+          "input": "S72",
+          "correct": false,
+          "note": "N. defluvii was not mentioned in the input text"
+        }
       },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
+      {
+        "rule": {
+          "group": {
+            "name": "N. defluvii",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "tRNAglu (TTC anticodon)",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "count",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 7
+            }
+          }
+        },
+        "metadata": {
+          "explain": "In N. defluvii, there are at least 7 tRNAglu genes (TTC anticodon) in a row, suggesting a slipped mispair mechanism of expansion during rapid growth.",
+          "input": "S72",
+          "correct": false,
+          "note": "N. defluvii was not mentioned in the input text"
         }
       }
-    },
-    "metadata": {
-      "explain": "The ompB gene is conserved in all available Rickettsia genomes.",
-      "input": "S57",
-      "correct": null
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "Rickettsia genomes",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "sca4",
-        "type": "gene"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
+  "S82": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Borrelia",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "plasmid-encoded proteins",
+            "type": "protein"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Borrelia species have plasmid-encoded proteins involved in replication and compatibility, such as Pfam32 and Pfam49.",
+          "input": "S82",
+          "correct": false,
+          "note": "actually true, but this is way too obvious to be interesting"
         }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Borrelia",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "Pfam32",
+            "type": "protein"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Borrelia species have a protein called Pfam32, which is homologous to ParA, a plasmid partitioning protein found in other bacteria.",
+          "input": "S82",
+          "correct": true,
+          "note": "actually the content type is wrong, it should be ortholog genes or protein family"
+        }
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "Borrelia",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "Pfam49",
+            "type": "protein"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Borrelia species have a protein called Pfam49, which is unique to this genus and is involved in replication and compatibility.",
+          "input": "S82",
+          "correct": true,
+          "note": "actually the content type is wrong, it should be ortholog genes or protein family"
+        }
+      ],
+      "counts":
+      {
       }
-    },
-    "metadata": {
-      "explain": "The sca4 gene is conserved in all available Rickettsia genomes.",
-      "input": "S57",
-      "correct": true
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "Rickettsia genomes",
-        "type": "taxon",
-        "quantifier": "."
+  "S85": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "LD species",
+            "type": "location",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "ospAB operons",
+            "type": "operon"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "group",
+              "data": "RF species"
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The ospAB operons are present in LD species but absent in RF species.",
+          "input": "S85",
+          "correct": false,
+          "note": "LD species is not a location; the mode presence cannot be used when comparing between two groups"
+        }
       },
-      "content": {
-        "name": "remaining members",
-        "type": "gene"
+      {
+        "rule": {
+          "group": {
+            "name": "LD species",
+            "type": "location",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "dbpAB operons",
+            "type": "operon"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "group",
+              "data": "RF species"
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The dbpAB operons are present in LD species but absent in RF species.",
+          "input": "S85",
+          "correct": false,
+          "note": "LD species is not a location; the mode presence cannot be used when comparing between two groups"
+        }
       },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": false
+      {
+        "rule": {
+          "group": {
+            "name": "LD lineage",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "GC skew analysis",
+            "type": "analysis"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "GC skew analysis indicates that the ospAB and dbpAB operons were acquired horizontally by the LD lineage.",
+          "input": "S85",
+          "correct": false,
+          "note": "GC skew analysis is not a genome content; analysis is not a valid content type"
         }
       }
-    },
-    "metadata": {
-      "explain": "The remaining members of the Rickettsia genomes are degraded or absent in one or more species.",
-      "input": "S57",
-      "correct": false,
-      "note": "remaining members is not a gene"
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "N. defluvii",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "tRNA genes",
-        "type": "gene"
-      },
-      "measurement": {
-        "mode": "count",
-        "region": "."
-      },
-      "expectation": {
-        "operator": ">=",
-        "reference": {
-          "type": "value",
-          "data": 106
+  "S181": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "N. defluvii",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "superoxide dismutase (SOD)",
+            "type": "protein"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "N. defluvii lacks superoxide dismutase (SOD) in its genome.",
+          "input": "S181",
+          "correct": null
         }
       }
-    },
-    "metadata": {
-      "explain": "N. defluvii has a high number of tRNA genes (106 genes), similar to vibrios and Photobacterium profundum.",
-      "input": "S72",
-      "correct": false,
-      "note": "N. defluvii was not mentioned in the input text"
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "N. defluvii",
-        "type": "taxon",
-        "quantifier": "."
+  "S152": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Enterobacter",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "blaNMC-A/IMI-type genes",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "blaNMC-A/IMI-type genes have been found rarely outside Enterobacter.",
+          "input": "S152",
+          "correct": false,
+          "note": "not correct without a quantifier, such as some"
+        }
       },
-      "content": {
-        "name": "longest run of tRNA genes",
-        "type": "gene"
-      },
-      "measurement": {
-        "mode": "count",
-        "region": "."
-      },
-      "expectation": {
-        "operator": ">=",
-        "reference": {
-          "type": "value",
-          "data": 19
+      {
+        "rule": {
+          "group": {
+            "name": "Enterobacter",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "plasmid instability",
+            "type": "phenomenon"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "There is a potential plasmid instability of blaNMC-A/IMI-type genes in other genera, as putatively shown for pIMI-5 in E. coli.",
+          "input": "S152",
+          "correct": false,
+          "note": "plasmid instability is not a genome content; phenomenon is not a genome content type in the provided list"
         }
       }
-    },
-    "metadata": {
-      "explain": "The longest run of tRNA genes in N. defluvii contains at least 19 tRNA genes in a row.",
-      "input": "S72",
-      "correct": false,
-      "note": "N. defluvii was not mentioned in the input text"
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "N. defluvii",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "tRNAglu (TTC anticodon)",
-        "type": "gene"
-      },
-      "measurement": {
-        "mode": "count",
-        "region": "."
-      },
-      "expectation": {
-        "operator": ">=",
-        "reference": {
-          "type": "value",
-          "data": 7
+  "S155": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "various bacteria",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "type III PKSs",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "group",
+              "data": "Streptomyces"
+            }
+          }
+        },
+        "metadata": {
+          "explain": "Type III PKSs are predicted to be distributed widely not only in Streptomyces but also in various bacteria.",
+          "input": "S155",
+          "correct": false,
+          "note": "presence cannot be compared to another group, but only be equal true or false"
         }
       }
-    },
-    "metadata": {
-      "explain": "In N. defluvii, there are at least 7 tRNAglu genes (TTC anticodon) in a row, suggesting a slipped mispair mechanism of expansion during rapid growth.",
-      "input": "S72",
-      "correct": false,
-      "note": "N. defluvii was not mentioned in the input text"
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "Borrelia",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "plasmid-encoded proteins",
-        "type": "protein"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
+  "S171": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Octadecabacter genomes",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "pseudogenes",
+            "type": "gene"
+          },
+          "measurement": {
+            "mode": "count",
+            "region": "."
+          },
+          "expectation": {
+            "operator": ">=",
+            "reference": {
+              "type": "value",
+              "data": 360
+            }
+          }
+        },
+        "metadata": {
+          "explain": "The Octadecabacter genomes exhibit a high mutagenicity indicated by an unusually large number of pseudogenes.",
+          "input": "S171",
+          "correct": false,
+          "note": "giving an exact number is wrong, a correct rule would just state that the count is high"
         }
-      }
-    },
-    "metadata": {
-      "explain": "Borrelia species have plasmid-encoded proteins involved in replication and compatibility, such as Pfam32 and Pfam49.",
-      "input": "S82",
-      "correct": false,
-      "note": "actually true, but this is way too obvious to be interesting"
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "Borrelia",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "Pfam32",
-        "type": "protein"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
+  "S181": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "N. defluvii",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "catalase",
+            "type": "protein"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "N. defluvii lacks catalase in its genome.",
+          "input": "S181",
+          "correct": true
         }
-      }
-    },
-    "metadata": {
-      "explain": "Borrelia species have a protein called Pfam32, which is homologous to ParA, a plasmid partitioning protein found in other bacteria.",
-      "input": "S82",
-      "correct": true,
-      "note": "actually the content type is wrong, it should be ortholog genes or protein family"
+      },
+      {
+        "rule": {
+          "group": {
+            "name": "N. defluvii",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "superoxide reductase",
+            "type": "protein"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": false
+            }
+          }
+        },
+        "metadata": {
+          "explain": "N. defluvii does not code for superoxide reductase in its genome.",
+          "input": "S181",
+          "correct": true
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule": {
-      "group": {
-        "name": "Borrelia",
-        "type": "taxon",
-        "quantifier": "."
+  "S184": {
+    "output": [
+      {
+        "rule": {
+          "group": {
+            "name": "Enterobacteriaceae",
+            "type": "taxon",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "IMP-type metallo-β-lactamases",
+            "type": "family"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "value",
+              "data": true
+            }
+          }
+        },
+        "metadata": {
+          "explain": "IMP-type metallo-β-lactamases are among the most common families of acquired carbapenemases detected from Enterobacteriaceae.",
+          "input": "S184",
+          "correct": false,
+          "note": "wrong without a quantifier, since not all Enterobacteriaceae contain the category"
+        }
       },
-      "content": {
-        "name": "Pfam49",
-        "type": "protein"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
+      {
+        "rule": {
+          "group": {
+            "name": "East Asia",
+            "type": "location",
+            "quantifier": "."
+          },
+          "content": {
+            "name": "IMP-type metallo-β-lactamases",
+            "type": "family"
+          },
+          "measurement": {
+            "mode": "presence",
+            "region": "."
+          },
+          "expectation": {
+            "operator": "==",
+            "reference": {
+              "type": "group",
+              "data": "Japan"
+            }
+          }
+        },
+        "metadata": {
+          "explain": "IMP-type metallo-β-lactamases have been reported mainly in East Asia, including Japan.",
+          "input": "S184",
+          "correct": "presence cannot be compared to a group; also: the comparison East Asia to Japan is wrong"
         }
       }
-    },
-    "metadata": {
-      "explain": "Borrelia species have a protein called Pfam49, which is unique to this genus and is involved in replication and compatibility.",
-      "input": "S82",
-      "correct": true,
-      "note": "actually the content type is wrong, it should be ortholog genes or protein family"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "LD species",
-        "type": "location",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "ospAB operons",
-        "type": "operon"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "group",
-          "data": "RF species"
-        }
-      }
-    },
-    "metadata": {
-      "explain": "The ospAB operons are present in LD species but absent in RF species.",
-      "input": "S85",
-      "correct": false,
-      "note": "LD species is not a location; the mode presence cannot be used when comparing between two groups"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "LD species",
-        "type": "location",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "dbpAB operons",
-        "type": "operon"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "group",
-          "data": "RF species"
-        }
-      }
-    },
-    "metadata": {
-      "explain": "The dbpAB operons are present in LD species but absent in RF species.",
-      "input": "S85",
-      "correct": false,
-      "note": "LD species is not a location; the mode presence cannot be used when comparing between two groups"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "LD lineage",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "GC skew analysis",
-        "type": "analysis"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
-        }
-      }
-    },
-    "metadata": {
-      "explain": "GC skew analysis indicates that the ospAB and dbpAB operons were acquired horizontally by the LD lineage.",
-      "input": "S85",
-      "correct": false,
-      "note": "GC skew analysis is not a genome content; analysis is not a valid content type"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "N. defluvii",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "superoxide dismutase (SOD)",
-        "type": "protein"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": false
-        }
-      }
-    },
-    "metadata": {
-      "explain": "N. defluvii lacks superoxide dismutase (SOD) in its genome.",
-      "input": "S181",
-      "correct": null
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "Enterobacter",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "blaNMC-A/IMI-type genes",
-        "type": "gene"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
-        }
-      }
-    },
-    "metadata": {
-      "explain": "blaNMC-A/IMI-type genes have been found rarely outside Enterobacter.",
-      "input": "S152",
-      "correct": false,
-      "note": "not correct without a quantifier, such as some"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "Enterobacter",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "plasmid instability",
-        "type": "phenomenon"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
-        }
-      }
-    },
-    "metadata": {
-      "explain": "There is a potential plasmid instability of blaNMC-A/IMI-type genes in other genera, as putatively shown for pIMI-5 in E. coli.",
-      "input": "S152",
-      "correct": false,
-      "note": "plasmid instability is not a genome content; phenomenon is not a genome content type in the provided list"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "various bacteria",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "type III PKSs",
-        "type": "gene"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "group",
-          "data": "Streptomyces"
-        }
-      }
-    },
-    "metadata": {
-      "explain": "Type III PKSs are predicted to be distributed widely not only in Streptomyces but also in various bacteria.",
-      "input": "S155",
-      "correct": false,
-      "note": "presence cannot be compared to another group, but only be equal true or false"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "Octadecabacter genomes",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "pseudogenes",
-        "type": "gene"
-      },
-      "measurement": {
-        "mode": "count",
-        "region": "."
-      },
-      "expectation": {
-        "operator": ">=",
-        "reference": {
-          "type": "value",
-          "data": 360
-        }
-      }
-    },
-    "metadata": {
-      "explain": "The Octadecabacter genomes exhibit a high mutagenicity indicated by an unusually large number of pseudogenes.",
-      "input": "S171",
-      "correct": false,
-      "note": "giving an exact number is wrong, a correct rule would just state that the count is high"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "N. defluvii",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "catalase",
-        "type": "protein"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": false
-        }
-      }
-    },
-    "metadata": {
-      "explain": "N. defluvii lacks catalase in its genome.",
-      "input": "S181",
-      "correct": true
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "N. defluvii",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "superoxide reductase",
-        "type": "protein"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": false
-        }
-      }
-    },
-    "metadata": {
-      "explain": "N. defluvii does not code for superoxide reductase in its genome.",
-      "input": "S181",
-      "correct": true
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "Enterobacteriaceae",
-        "type": "taxon",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "IMP-type metallo-β-lactamases",
-        "type": "family"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "value",
-          "data": true
-        }
-      }
-    },
-    "metadata": {
-      "explain": "IMP-type metallo-β-lactamases are among the most common families of acquired carbapenemases detected from Enterobacteriaceae.",
-      "input": "S184",
-      "correct": false,
-      "note": "wrong without a quantifier, since not all Enterobacteriaceae contain the category"
-    }
-  },
-  {
-    "rule": {
-      "group": {
-        "name": "East Asia",
-        "type": "location",
-        "quantifier": "."
-      },
-      "content": {
-        "name": "IMP-type metallo-β-lactamases",
-        "type": "family"
-      },
-      "measurement": {
-        "mode": "presence",
-        "region": "."
-      },
-      "expectation": {
-        "operator": "==",
-        "reference": {
-          "type": "group",
-          "data": "Japan"
-        }
-      }
-    },
-    "metadata": {
-      "explain": "IMP-type metallo-β-lactamases have been reported mainly in East Asia, including Japan.",
-      "input": "S184",
-      "correct": "presence cannot be compared to a group; also: the comparison East Asia to Japan is wrong"
+    ],
+    "counts": {
     }
   }
-]
+}

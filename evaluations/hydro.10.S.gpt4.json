@@ -1,433 +1,480 @@
-[
-  {
-    "rule":
-    {
-      "group":       {"name": "Gammaproteobacteria", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "pyrophosphate-dependent 6-phosphofructokinase", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "pyrophosphate-dependent 6-phosphofructokinase has been identified in Gammaproteobacteria",
-      "input": "SH4",
-      "correct": false,
-      "error": "too generic; the assertion in the text is limited to methanotrophic and thiotrophic Gammaproteobacteria"
+{
+  "SH4": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "Gammaproteobacteria", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "pyrophosphate-dependent 6-phosphofructokinase", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "pyrophosphate-dependent 6-phosphofructokinase has been identified in Gammaproteobacteria",
+          "input": "SH4",
+          "correct": false,
+          "error": "too generic; the assertion in the text is limited to methanotrophic and thiotrophic Gammaproteobacteria"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "Gammaproteobacteria", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "proton-translocating pyrophosphatase", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "proton-translocating pyrophosphatase has been identified in Gammaproteobacteria",
+          "input": "SH4",
+          "correct": false,
+          "error": "too generic; the assertion in the text is limited to methanotrophic and thiotrophic Gammaproteobacteria"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "methanotrophic and thiotrophic Gammaproteobacteria", "type": "metabolism", "quantifier": "."},
+          "content":     {"name": "pyrophosphate-dependent 6-phosphofructokinase", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "pyrophosphate-dependent 6-phosphofructokinase has been identified in methanotrophic and thiotrophic Gammaproteobacteria",
+          "input": "SH4",
+          "correct": false,
+          "partially_accetable": true,
+          "error": "the text does not state that all of those organisms have the gene; thus a quantifier 'some' would be appropriate; but this would likely require a prompt change"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "methanotrophic and thiotrophic Gammaproteobacteria", "type": "metabolism", "quantifier": "."},
+          "content":     {"name": "proton-translocating pyrophosphatase", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "proton-translocating pyrophosphatase has been identified in methanotrophic and thiotrophic Gammaproteobacteria",
+          "input": "SH4",
+          "correct": false,
+          "partially_accetable": true,
+          "error": "the text does not state that all of those organisms have the gene; thus a quantifier 'some' would be appropriate; but this would likely require a prompt change"
+        }
+      }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "Gammaproteobacteria", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "proton-translocating pyrophosphatase", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "proton-translocating pyrophosphatase has been identified in Gammaproteobacteria",
-      "input": "SH4",
-      "correct": false,
-      "error": "too generic; the assertion in the text is limited to methanotrophic and thiotrophic Gammaproteobacteria"
+  "SH7": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "strain Hiromi 1", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "The flavoprotein-cytochrome c complex (SoxEF) is present in strain Hiromi 1",
+          "input": "SH7",
+          "correct": true,
+          "not_in_dataset": "single strain information"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "Chromatiaceae species", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "The flavoprotein-cytochrome c complex (SoxEF) is present in Chromatiaceae species",
+          "input": "SH7",
+          "correct": true,
+          "rule_id": "VH17"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "Calyptogena clam symbionts", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "The flavoprotein-cytochrome c complex (SoxEF) is absent in Calyptogena clam symbionts",
+          "input": "",
+          "correct": true,
+          "rule_id": "VH16"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "T. crunogena", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "The flavoprotein-cytochrome c complex (SoxEF) is absent in T. crunogena",
+          "input": "SH7",
+          "correct": true,
+          "rule_id": "VH18"
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "methanotrophic and thiotrophic Gammaproteobacteria", "type": "metabolism", "quantifier": "."},
-      "content":     {"name": "pyrophosphate-dependent 6-phosphofructokinase", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "pyrophosphate-dependent 6-phosphofructokinase has been identified in methanotrophic and thiotrophic Gammaproteobacteria",
-      "input": "SH4",
-      "correct": false,
-      "partially_accetable": true,
-      "error": "the text does not state that all of those organisms have the gene; thus a quantifier 'some' would be appropriate; but this would likely require a prompt change"
+  "SH12": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "Gua-46 MAG", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "tyrosine-specific transporter", "type": "protein", "gene": "Gua_114"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "The Gua-46 MAG contains a predicted tyrosine-specific transporter",
+          "input": "SH12",
+          "correct": true,
+          "rule_id": "VH24",
+          "note": "however format error, an additional key 'gene' was added to 'content'"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "MC-1 MAG", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "cytidylate kinase", "type": "protein", "gene": "MC-1_488"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "MC-1 MAG encodes for genes involved in nucleotide biotransformation including a cytidylate kinase",
+          "input": "SH12",
+          "correct": true,
+          "rule_id": "VH337",
+          "note": "however format error, an additional key 'gene' was added to 'content'"
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "MC-1 MAG", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "uridylate kinase", "type": "protein", "gene": "MC-1_320"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "MC-1 MAG encodes for genes involved in nucleotide biotransformation including a uridylate kinase",
+          "input": "SH12",
+          "correct": true,
+          "rule_id": "VH338",
+          "note": "however format error, an additional key 'gene' was added to 'content'"
+        }
+      },
+      {
+        "input": "SH12",
+        "missing": ["VH23", "VH335", "VH336"],
+        "note": "missing rules derived from 'unlike cultivated Nanoarchaeota' and 'not ... identified in cultivated Nanoarchaeota'"
+      }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "methanotrophic and thiotrophic Gammaproteobacteria", "type": "metabolism", "quantifier": "."},
-      "content":     {"name": "proton-translocating pyrophosphatase", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "proton-translocating pyrophosphatase has been identified in methanotrophic and thiotrophic Gammaproteobacteria",
-      "input": "SH4",
-      "correct": false,
-      "partially_accetable": true,
-      "error": "the text does not state that all of those organisms have the gene; thus a quantifier 'some' would be appropriate; but this would likely require a prompt change"
+  "SH31": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "Mtr", "type": "protein"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "The lack of Mtr in the three Methanomassiliicoccales",
+          "input": "SH31",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "genes of the CO2-reductive pathway", "type": "pathway"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "The other genes of the CO2-reductive pathway are absent from the three Methanomassiliicoccales",
+          "input": "SH31",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "methanogenesis markers 10", "type": "gene", "id": "arCOG00950"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "Methanogenesis marker 10 (arCOG00950) is absent from the three Methanomassiliicoccales genomes",
+          "input": "SH31",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "methanogenesis markers 14", "type": "gene", "id": "arCOG04866"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "Methanogenesis marker 14 (arCOG04866) is absent from the three Methanomassiliicoccales genomes",
+          "input": "SH31",
+          "correct": null
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "strain Hiromi 1", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "The flavoprotein-cytochrome c complex (SoxEF) is present in strain Hiromi 1",
-      "input": "SH7",
-      "correct": true,
-      "not_in_dataset": "single strain information"
+  "SH51": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "Gammaproteobacteria at the Irina II site", "type": "location", "quantifier": "."},
+          "content":     {"name": "APS pathway", "type": "pathway"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "Gammaproteobacteria at the Irina II site mainly use the APS pathway for sulfur oxidation",
+          "input": "SH51",
+          "correct": null
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "Chromatiaceae species", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "The flavoprotein-cytochrome c complex (SoxEF) is present in Chromatiaceae species",
-      "input": "SH7",
-      "correct": true,
-      "rule_id": "VH17"
+  "SH58": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "ammonia-oxidizing bacteria", "type": "metabolism", "quantifier": "."},
+          "content":     {"name": "representatives of the COG4654 and COG2863 protein family", "type": "family"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "In ammonia-oxidizing bacteria, representatives of the COG4654 and COG2863 protein family are key electron carriers",
+          "input": "SH58",
+          "correct": null
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "Calyptogena clam symbionts", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "The flavoprotein-cytochrome c complex (SoxEF) is absent in Calyptogena clam symbionts",
-      "input": "",
-      "correct": true,
-      "rule_id": "VH16"
+  "SH66a": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "vent Epsilonproteobacteria", "type": "habitat_kind", "quantifier": "all"},
+          "content":     {"name": "homologs to the second arsenate reductase (GAmH_0397 in N. profundicola)", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "All the vent Epsilonproteobacteria contain homologs to the second arsenate reductase",
+          "input": "SH66a",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "S. denitrificans", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "homologs to the second arsenate reductase (GAmH_0397 in N. profundicola)", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "S. denitrificans contain homologs to the second arsenate reductase",
+          "input": "SH66a",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "A. butzleri", "type": "taxon", "quantifier": "."},
+          "content":     {"name": "homologs to the second arsenate reductase (GAmH_0397 in N. profundicola)", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "A. butzleri contain homologs to the second arsenate reductase",
+          "input": "SH66a",
+          "correct": null
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "T. crunogena", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "flavoprotein-cytochrome c complex (SoxEF)", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "The flavoprotein-cytochrome c complex (SoxEF) is absent in T. crunogena",
-      "input": "SH7",
-      "correct": true,
-      "rule_id": "VH18"
+  "SH68": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "seven Thermococcus species isolated from a solfataric acid field or hydrothermal vent", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "CODH-encoding gene", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "The CODH-encoding gene was not detected in any of the seven Thermococcus species isolated from a solfataric acid field or hydrothermal vent",
+          "input": "SH68",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "Thermococcus spp.", "type": "taxon", "quantifier": "some"},
+          "content":     {"name": "CODH-encoding gene", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "CODH-encoding gene is present only in a few Thermococcus spp.",
+          "input": "SH68",
+          "correct": null
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "Gua-46 MAG", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "tyrosine-specific transporter", "type": "protein", "gene": "Gua_114"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "The Gua-46 MAG contains a predicted tyrosine-specific transporter",
-      "input": "SH12",
-      "correct": true,
-      "rule_id": "VH24",
-      "note": "however format error, an additional key 'gene' was added to 'content'"
+  "SH83": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "the studied genomes", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "form II RuBisCo gene", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "The genomes contain the gene for form II RuBisCo",
+          "input": "SH83",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "the studied genomes", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "form I RuBisCo gene (cbbL)", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "They do not contain the gene for form I RuBisCo (cbbL)",
+          "input": "SH83",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "Zetaproteobacteria, for example, strains CP-5, CP-8, EKF-M39, TAG-1, and SV-108", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "form I RuBisCo gene (cbbL)", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
+        },
+        "metadata":
+        {
+          "explain": "This observation is consistent with findings in other Zetaproteobacteria, for example, strains CP-5, CP-8, EKF-M39, TAG-1, and SV-108",
+          "input": "SH83",
+          "correct": null
+        }
+    ],
+    "counts": {
     }
   },
-  {
-    "rule":
-    {
-      "group":       {"name": "MC-1 MAG", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "cytidylate kinase", "type": "protein", "gene": "MC-1_488"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "MC-1 MAG encodes for genes involved in nucleotide biotransformation including a cytidylate kinase",
-      "input": "SH12",
-      "correct": true,
-      "rule_id": "VH337",
-      "note": "however format error, an additional key 'gene' was added to 'content'"
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "MC-1 MAG", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "uridylate kinase", "type": "protein", "gene": "MC-1_320"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "MC-1 MAG encodes for genes involved in nucleotide biotransformation including a uridylate kinase",
-      "input": "SH12",
-      "correct": true,
-      "rule_id": "VH338",
-      "note": "however format error, an additional key 'gene' was added to 'content'"
-    }
-  },
-  {
-    "input": "SH12",
-    "missing": ["VH23", "VH335", "VH336"],
-    "note": "missing rules derived from 'unlike cultivated Nanoarchaeota' and 'not ... identified in cultivated Nanoarchaeota'"
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "Mtr", "type": "protein"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "The lack of Mtr in the three Methanomassiliicoccales",
-      "input": "SH31",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "genes of the CO2-reductive pathway", "type": "pathway"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "The other genes of the CO2-reductive pathway are absent from the three Methanomassiliicoccales",
-      "input": "SH31",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "methanogenesis markers 10", "type": "gene", "id": "arCOG00950"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "Methanogenesis marker 10 (arCOG00950) is absent from the three Methanomassiliicoccales genomes",
-      "input": "SH31",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "three Methanomassiliicoccales", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "methanogenesis markers 14", "type": "gene", "id": "arCOG04866"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "Methanogenesis marker 14 (arCOG04866) is absent from the three Methanomassiliicoccales genomes",
-      "input": "SH31",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "Gammaproteobacteria at the Irina II site", "type": "location", "quantifier": "."},
-      "content":     {"name": "APS pathway", "type": "pathway"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "Gammaproteobacteria at the Irina II site mainly use the APS pathway for sulfur oxidation",
-      "input": "SH51",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "ammonia-oxidizing bacteria", "type": "metabolism", "quantifier": "."},
-      "content":     {"name": "representatives of the COG4654 and COG2863 protein family", "type": "family"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "In ammonia-oxidizing bacteria, representatives of the COG4654 and COG2863 protein family are key electron carriers",
-      "input": "SH58",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "vent Epsilonproteobacteria", "type": "habitat_kind", "quantifier": "all"},
-      "content":     {"name": "homologs to the second arsenate reductase (GAmH_0397 in N. profundicola)", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "All the vent Epsilonproteobacteria contain homologs to the second arsenate reductase",
-      "input": "SH66a",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "S. denitrificans", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "homologs to the second arsenate reductase (GAmH_0397 in N. profundicola)", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "S. denitrificans contain homologs to the second arsenate reductase",
-      "input": "SH66a",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "A. butzleri", "type": "taxon", "quantifier": "."},
-      "content":     {"name": "homologs to the second arsenate reductase (GAmH_0397 in N. profundicola)", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "A. butzleri contain homologs to the second arsenate reductase",
-      "input": "SH66a",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "seven Thermococcus species isolated from a solfataric acid field or hydrothermal vent", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "CODH-encoding gene", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "The CODH-encoding gene was not detected in any of the seven Thermococcus species isolated from a solfataric acid field or hydrothermal vent",
-      "input": "SH68",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "Thermococcus spp.", "type": "taxon", "quantifier": "some"},
-      "content":     {"name": "CODH-encoding gene", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "CODH-encoding gene is present only in a few Thermococcus spp.",
-      "input": "SH68",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "the studied genomes", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "form II RuBisCo gene", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "The genomes contain the gene for form II RuBisCo",
-      "input": "SH83",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "the studied genomes", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "form I RuBisCo gene (cbbL)", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "They do not contain the gene for form I RuBisCo (cbbL)",
-      "input": "SH83",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "Zetaproteobacteria, for example, strains CP-5, CP-8, EKF-M39, TAG-1, and SV-108", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "form I RuBisCo gene (cbbL)", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": false}}
-    },
-    "metadata":
-    {
-      "explain": "This observation is consistent with findings in other Zetaproteobacteria, for example, strains CP-5, CP-8, EKF-M39, TAG-1, and SV-108",
-      "input": "SH83",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "many Zetaproteobacteria and other Fe(II)-oxidizing bacteria", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "the alternative respiratory complex III (AC-III)", "type": "orthologs"},
-      "measurement": {"mode": "presence", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
-    },
-    "metadata":
-    {
-      "explain": "The presence of the alternative respiratory complex III (AC-III) is a common feature in many Zetaproteobacteria and other Fe(II)-oxidizing bacteria",
-      "input": "SH85",
-      "correct": null
-    }
-  },
-  {
-    "rule":
-    {
-      "group":       {"name": "many Zetaproteobacteria and other Fe(II)-oxidizing bacteria", "type": "taxon", "quantifier": "all"},
-      "content":     {"name": "molybdopterin oxidoreductase", "type": "orthologs", "gene": "actB"},
-      "measurement": {"mode": "function", "region": "."},
-      "expectation": {"operator": "==", "reference": {"type": "value", "data": "Fe(II) oxidation"}}
-    },
-    "metadata":
-    {
-      "explain": "They are hypothesized to be able to use the AC-III, which is thought to be analogous to the bc1 complex, as well as a molybdopterin oxidoreductase (encoded by the actB gene) to facilitate Fe(II) oxidation",
-      "input": "SH85",
-      "correct": null
+  "SH85": {
+    "output": [
+      {
+        "rule":
+        {
+          "group":       {"name": "many Zetaproteobacteria and other Fe(II)-oxidizing bacteria", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "the alternative respiratory complex III (AC-III)", "type": "orthologs"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "The presence of the alternative respiratory complex III (AC-III) is a common feature in many Zetaproteobacteria and other Fe(II)-oxidizing bacteria",
+          "input": "SH85",
+          "correct": null
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "many Zetaproteobacteria and other Fe(II)-oxidizing bacteria", "type": "taxon", "quantifier": "all"},
+          "content":     {"name": "molybdopterin oxidoreductase", "type": "orthologs", "gene": "actB"},
+          "measurement": {"mode": "function", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": "Fe(II) oxidation"}}
+        },
+        "metadata":
+        {
+          "explain": "They are hypothesized to be able to use the AC-III, which is thought to be analogous to the bc1 complex, as well as a molybdopterin oxidoreductase (encoded by the actB gene) to facilitate Fe(II) oxidation",
+          "input": "SH85",
+          "correct": null
+        }
+    ],
+    "counts": {
     }
   }
-]
-
-
-
-
-
+}
