@@ -50,10 +50,14 @@ appropriate values, following the conventions explained below.
    the group of organisms for which the expectation about the contents holds
 
    __GROUPNAME__: how the group is called in the input text
-   __GROUPQUANTIFIER__: if any, an expression from the input text used next to the group
-      name to indicate a portion of the group, e.g. many, none, some, or a percentage
-      (e.g. 90\%). In many cases there will be no such expression in the input text,
-      and __GROUPQUANTIFIER__ is then set to a dot "."
+   __GROUPQUANTIFIER__: if any, an expression from the input text used next to
+      the group name to indicate a portion of the group, e.g. many, none, some, or
+      a percentage (e.g. 90\%). In some other cases it is understandable from the
+      context that the rule does not hold for all elements of the group and
+      __GROUPQUANTIFIER__ is set to an expression, e.g. "some", which describes
+      for which part of the group it holds. In many cases there will be no such
+      expression in the input text or be implied from the context, and
+     __GROUPQUANTIFIER__ is then set to a dot "."
    __GROUPTYPE__: describes the type of criterion which defines the group;
                   it must be one of the following values:
        (1) "taxon": the group is a taxon
