@@ -1,0 +1,72 @@
+{
+  "H": {
+    "GPT-4": {
+      "excellent": 8,
+      "excellent_joined": 6,
+      "excellent_split": 1,
+      "good": 6,
+      "good_joined": 14,
+      "junk_joined": 2,
+      "new_wrong": 2,
+      "missing": 13
+    },
+    "GPT3.5": {
+      "excellent": 2,
+      "good": 1,
+      "fair": 5,
+      "poor_joined": 15,
+      "poor": 5,
+      "poor_split": 1,
+      "junk_joined": 2,
+      "new_wrong": 1,
+      "missing": 19
+    }
+  },
+  "B": {
+    "GPT-4": {
+      "excellent": 6,
+      "excellent_split": 2,
+      "good": 4,
+      "good_split": 1,
+      "good_joined": 2,
+      "fair": 2,
+      "junk": 2,
+      "new_wrong": 1,
+      "missing": 6
+    },
+    "GPT3.5": {
+      "excellent": 4,
+      "good": 3,
+      "good_joined": 2,
+      "fair": 2,
+      "poor_joined": 6,
+      "junk": 5,
+      "new_wrong": 4,
+      "missing": 5
+    }
+  },
+  "A": {
+    "GPT4": {
+      "excellent": 6,
+      "excellent_split": 2,
+      "good": 3,
+      "good_joined": 8,
+      "poor_joined": 2,
+      "poor": 1,
+      "new_overlapping": 6,
+      "new_wrong": 2,
+      "missing": 9
+    },
+    "GPT3.5": {
+      "excellent": 1,
+      "good": 6,
+      "good_joined": 2,
+      "fair": 1,
+      "fair_joined": 2,
+      "poor": 5,
+      "poor_joined": 2,
+      "new_wrong": 3,
+      "missing": 12
+    }
+  }
+}
