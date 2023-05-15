@@ -12,12 +12,14 @@
         "metadata":
         {
           "explain": "dlt operon is present in Gram-positive bacteria",
-          "input": "S42",
-          "correct": true
+          "errors": ["missing_quantifier"],
+          "quality": "good",
+          "rule_id": "V57"
         }
       }
     ],
     "counts": {
+      "good": 1
     }
   },
   "S57": {
@@ -33,8 +35,8 @@
         "metadata":
         {
           "explain": "ompB is conserved in all Rickettsia genomes",
-          "input": "S57",
-          "correct": true
+          "quality": "excellent",
+          "rule_id": "V114"
         }
       },
       {
@@ -48,50 +50,74 @@
         "metadata":
         {
           "explain": "sca4 is conserved in all Rickettsia genomes",
-          "input": "S57",
-          "correct": true
+          "quality": "excellent",
+          "rule_id": "V115"
         }
       }
     ],
     "counts": {
+      "excellent": 2
     }
   },
-  "S72": {
+  "S132": {
     "output": [
       {
         "rule":
         {
-          "group": {"name": "vibrios", "type": "taxon", "quantifier": "."},
-          "content": {"name": "tRNA genes", "type": "feature_type"},
-          "measurement": {"mode": "count", "region": "."},
-          "expectation": {"operator": ">=", "reference": {"type": "value", "data": 106}}
+          "group":       {"name": "vertebrate pathogens and commensals", "type": "interaction", "quantifier": "."},
+          "content":     {"name": "cas1 gene", "type": "gene"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
         },
         "metadata":
         {
-          "explain": "The number of tRNA genes in vibrios is quite high, similar to 106 genes",
-          "input": "S72",
-          "correct": false,
-          "note": "in common with vibrios is not 106 but the fact that the count is high"
+          "explain": "The cas1 gene is part of the CRISPR subtype Nmeni associated with vertebrate pathogens and commensals",
+          "quality": "good_split",
+          "errors": ["missing_quantifier"],
+          "rule_id": "V238",
+          "notes": {"split": "it is more correct to consider the CRISPR subtype than the 3 genes, since it's the set of those 3 which is object of the rule",
+                    "missing_quantifier": "however, if considering the genes separately, the rule can be correct, but with a quantifier, since not all will have the gene"}
         }
       },
       {
         "rule":
         {
-          "group": {"name": "Photobacterium profundum", "type": "taxon", "quantifier": "."},
-          "content": {"name": "tRNA genes", "type": "feature_type"},
-          "measurement": {"mode": "count", "region": "."},
-          "expectation": {"operator": ">=", "reference": {"type": "value", "data": 106}}
+          "group":       {"name": "vertebrate pathogens and commensals", "type": "interaction", "quantifier": "."},
+          "content":     {"name": "cas2 gene", "type": "gene"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
         },
         "metadata":
         {
-          "explain": "The number of tRNA genes in Photobacterium profundum is quite high, similar to 106 genes",
-          "input": "S72",
-          "correct": false,
-          "note": "in common with P.profundum is not 106 but the fact that the count is high"
+          "explain": "The cas2 gene is part of the CRISPR subtype Nmeni associated with vertebrate pathogens and commensals",
+          "quality": "good_split",
+          "errors": ["missing_quantifier"],
+          "rule_id": "V238",
+          "notes": {"split": "it is more correct to consider the CRISPR subtype than the 3 genes, since it's the set of those 3 which is object of the rule",
+                    "missing_quantifier": "however, if considering the genes separately, the rule can be correct, but with a quantifier, since not all will have the gene"}
+        }
+      },
+      {
+        "rule":
+        {
+          "group":       {"name": "vertebrate pathogens and commensals", "type": "interaction", "quantifier": "."},
+          "content":     {"name": "csn1 gene", "type": "gene"},
+          "measurement": {"mode": "presence", "region": "."},
+          "expectation": {"operator": "==", "reference": {"type": "value", "data": true}}
+        },
+        "metadata":
+        {
+          "explain": "The csn1 gene is part of the CRISPR subtype Nmeni associated with vertebrate pathogens and commensals",
+          "quality": "good_split",
+          "errors": ["missing_quantifier"],
+          "rule_id": "V238",
+          "notes": {"split": "it is more correct to consider the CRISPR subtype than the 3 genes, since it's the set of those 3 which is object of the rule",
+                    "missing_quantifier": "however, if considering the genes separately, the rule can be correct, but with a quantifier, since not all will have the gene"}
         }
       }
     ],
     "counts": {
+      "good_split": 1
     }
   },
   "S82": {
@@ -107,9 +133,10 @@
         "metadata":
         {
           "explain": "Pfam32 protein, homologous to ParA, is found in the segmented Borrelia genome",
-          "input": "S82",
-          "correct": true,
-          "note": "partially true, since Pfam32 is not a protein, it is a protein family"
+          "quality": "good",
+          "rule_id": "V9",
+          "errors": ["incorrect_content_type"],
+          "notes": {"incorrect_content_type": "the content type is wrong, it should be ortholog genes or protein family"}
         }
       },
       {
@@ -123,13 +150,16 @@
         "metadata":
         {
           "explain": "Pfam49 protein is found in the Borrelia genome and is unique to this genus",
-          "input": "S82",
-          "correct": true,
-          "note": "partially true, since Pfam49 is not a protein, it is a protein family"
+          "quality": "good_joined",
+          "rule_id": ["V161", "V162"],
+          "errors": ["incorrect_content_type"],
+          "notes": {"incorrect_content_type": "the content type is wrong, it should be ortholog genes or protein family"}
         }
       }
     ],
     "counts": {
+        "good_joined": 2,
+        "good": 1
     }
   },
   "S85": {
@@ -145,8 +175,9 @@
         "metadata":
         {
           "explain": "OspA (bba15) gene is present in the lp54 plasmids of LD species",
-          "input": "S85",
-          "correct": true
+          "notes": {"split": "operon OspAB instead of single genes"},
+          "rule_id": "V166",
+          "quality": "excellent_split"
         }
       },
       {
@@ -160,8 +191,9 @@
         "metadata":
         {
           "explain": "OspB (bba16) gene is present in the lp54 plasmids of LD species",
-          "input": "S85",
-          "correct": true
+          "notes": {"split": "operon OspAB instead of single genes"},
+          "rule_id": "V166",
+          "quality": "excellent_split"
         }
       },
       {
@@ -175,8 +207,9 @@
         "metadata":
         {
           "explain": "DbpA (bba24) gene is present in the lp54 plasmids of LD species",
-          "input": "S85",
-          "correct": true
+          "notes": {"split": "operon DbpAB instead of single genes"},
+          "rule_id": "V11",
+          "quality": "excellent_split"
         }
       },
       {
@@ -190,12 +223,15 @@
         "metadata":
         {
           "explain": "DbpB (bba25) gene is present in the lp54 plasmids of LD species",
-          "input": "S85",
-          "correct": true
+          "notes": {"split": "operon DbpAB instead of single genes"},
+          "rule_id": "V11",
+          "quality": "excellent_split"
         }
       }
     ],
     "counts": {
+      "excellent_split": 2,
+      "missing": 2
     }
   },
   "S152": {
@@ -211,9 +247,10 @@
         "metadata":
         {
           "explain": "blaNMC-A/IMI-type genes are found in Enterobacter",
-          "input": "S152",
-          "correct": false,
-          "note": "too general and false without a quantifier"
+          "errors": ["missing_quantifier"],
+          "quality": "good",
+          "rule_id": "V291",
+          "notes": {"missing_quantifier": "only some have the gene"}
         }
       },
       {
@@ -227,13 +264,16 @@
         "metadata":
         {
           "explain": "blaNMC-A/IMI-type genes are not found in the pIMI-5 of E. coli",
-          "input": "S152",
-          "correct": false,
-          "note": "pIMI-5 actually contains blaIMI-type genes"
+          "errors": ["incorrect_content_def", "incorrect_value"],
+          "quality": "junk",
+          "notes": {"wrong_content_def": "pIMI-5 actually contains blaIMI-type genes"}
         }
       }
     ],
     "counts": {
+      "good": 1,
+      "missing": 1,
+      "new_wrong": 1
     }
   },
   "S155": {
@@ -249,8 +289,10 @@
         "metadata":
         {
           "explain": "Type III PKSs are widely distributed in Streptomyces",
-          "input": "S155",
-          "correct": true
+          "quality": "good",
+          "errors": ["incorrect_quantifier"],
+          "notes": {"incorrect_quantifier": "various in the text refers to bacteria but not to Streptomyces"},
+          "rule_id": "V299"
         }
       },
       {
@@ -264,13 +306,14 @@
         "metadata":
         {
           "explain": "Type III PKSs are widely distributed in various bacteria",
-          "input": "S155",
-          "correct": true,
-          "note": "not included in manually curated dataset, since very generic"
+          "quality": "excellent",
+          "rule_id": "V15"
         }
       }
     ],
     "counts": {
+      "good": 1,
+      "excellent": 1
     }
   },
   "S171": {
@@ -286,9 +329,8 @@
         "metadata":
         {
           "explain": "Octadecabacter arcticus has an unusually large number of pseudogenes, 411.",
-          "input": "S171",
-          "correct": true,
-          "note": "not included in manually curated dataset, since referring to a single species"
+          "quality": "junk",
+          "errors": ["wrong_group_def", "wrong_content_def", "incorrect_quantifier", "unknown_key", "missing_key"]
         }
       },
       {
@@ -302,13 +344,14 @@
         "metadata":
         {
           "explain": "Octadecabacter antarcticus has an unusually large number of pseudogenes, 361.",
-          "input": "S171",
-          "correct": true,
-          "note": "not included in manually curated dataset, since referring to a single species"
+          "quality": "junk",
+          "errors": ["wrong_group_def", "wrong_content_def", "incorrect_quantifier", "unknown_key", "missing_key"]
         }
       }
     ],
     "counts": {
+      "junk": 2,
+      "missing": 1
     }
   },
   "S181": {
@@ -324,8 +367,8 @@
         "metadata":
         {
           "explain": "N. defluvii lacks SOD",
-          "input": "S181",
-          "correct": true
+          "quality": "excellent",
+          "rule_id": "V345"
         }
       },
       {
@@ -339,8 +382,8 @@
         "metadata":
         {
           "explain": "N. defluvii lacks catalase",
-          "input": "S181",
-          "correct": true
+          "quality": "excellent",
+          "rule_id": "V346"
         }
       },
       {
@@ -354,12 +397,14 @@
         "metadata":
         {
           "explain": "N. defluvii does not code for superoxide reductase",
-          "input": "S181",
-          "correct": true
+          "quality": "excellent",
+          "rule_id": "V347"
         }
       }
     ],
     "counts": {
+      "excellent": 3,
+      "missing": 2
     }
   },
   "S184": {
@@ -375,9 +420,10 @@
         "metadata":
         {
           "explain": "IMP-type metallo-β-lactamases are among the most common families of acquired carbapenemases detected from Enterobacteriaceae",
-          "input": "S184",
-          "correct": false,
-          "note": "not correct without a quantifier"
+          "errors": ["missing_quantifier"],
+          "quality": "fair",
+          "rule_id": "V363",
+          "notes": {"missing_quantifier": "wrong when expressed in this general way"}
         }
       },
       {
@@ -391,13 +437,15 @@
         "metadata":
         {
           "explain": "IMP-type metallo-β-lactamases have been reported mainly in Enterobacteriaceae from East Asia, including Japan",
-          "input": "S184",
-          "correct": false,
-          "note": "not correct without a quantifier"
+          "errors": ["missing_quantifier"],
+          "quality": "fair",
+          "rule_id": "V14",
+          "notes": {"missing_quantifier": "wrong when expressed in this general way"}
         }
       }
     ],
     "counts": {
+      "fair": 2
     }
   }
 }
