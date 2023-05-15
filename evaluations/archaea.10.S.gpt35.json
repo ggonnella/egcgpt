@@ -171,6 +171,7 @@
         "metadata": {
           "explain": "Strains such as Nitrososphaera viennensis, Ca. Nitrososphaera gargensis, and Ca. Cenarchaeum symbiosum possess urease and urea transporter genes in their genome.",
           "quality": "good",
+          "rule_id": ["VA45", "VA46"],
           "errors": ["multi_group_def", "multi_content_def"]
         }
       }

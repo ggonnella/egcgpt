@@ -266,6 +266,7 @@
           "explain": "blaNMC-A/IMI-type genes are not found in the pIMI-5 of E. coli",
           "errors": ["incorrect_content_def", "incorrect_value"],
           "quality": "junk",
+          "rule_id": null,
           "notes": {"wrong_content_def": "pIMI-5 actually contains blaIMI-type genes"}
         }
       }
@@ -330,6 +331,7 @@
         {
           "explain": "Octadecabacter arcticus has an unusually large number of pseudogenes, 411.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["wrong_group_def", "wrong_content_def", "incorrect_quantifier", "unknown_key", "missing_key"]
         }
       },
@@ -345,12 +347,13 @@
         {
           "explain": "Octadecabacter antarcticus has an unusually large number of pseudogenes, 361.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["wrong_group_def", "wrong_content_def", "incorrect_quantifier", "unknown_key", "missing_key"]
         }
       }
     ],
     "counts": {
-      "junk": 2,
+      "new_wrong": 2,
       "missing": 1
     }
   },

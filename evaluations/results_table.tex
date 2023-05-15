@@ -1,0 +1,33 @@
+\begin{table}
+\begin{tabular}{lllllllll}
+           &  \multicol{3}{*}{GPT 3.5}
+                             & \multicol{3}{*}{GPT 4} \\
+           &  H  &  B  &  A  & sum &  H  &  B  &  A & sum \\
+n.rules    & 50  & 23  & 31  & 104 & 50  & 23  & 31 & 104 \\
+excellent  &  2  &  5  &  1  &   8 & 15  &  8  &  8 &  31 \\
+good       &  1  &  5  &  8  &  14 & 20  &  7  &  3 &  30 \\
+fair       &  5  &  2  &  3  &  10 &  0  &  2  &  8 &  10 \\
+poor       & 21  &  6  &  7  &  34 &  0  &  0  &  3 &   3 \\
+junk       &  2  &  0  &  0  &   2 &  2  &  0  &  0 &   2 \\
+missing    & 19  &  5  & 12  &  36 & 13  &  6  &  9 &  28 \\
+add.wrong  &  1  &  9  &  3  &  13 &  2  &  3  &  2 &   7 \\
+score      & 980  & 1100 & 1110 & 3190 &
+            3260  & 1520 & 1590 & 6370 \\
+average    & 19.6 & 47.8 & 35.8 & 30.7 &
+             65.2 & 66.1 & 51.3 & 61.3 \\
+\end{tabular}
+\label{tab:evaluation}
+\caption{
+  Number of rules of expectations in each evalutation
+  category (excellent, good, fair, poor, junk) and number
+  of missing rules, as well as additional wrong rules
+  output by GPT3.5 and GPT4 for each of the datasets
+  (H, B, A). The score row contains a score, computed
+  as follows: for each excellent 100 points, good 90,
+  fair 60, poor 20, junk -10, missing 0, and additional wrong
+  -10 points. The average score (last row) is computed
+  dividing the score by the number of rules and it is equal
+  to the percent of the maximum achievable score (i.e.
+  all excellent answers, without additional wrong answers).
+}
+\end{table}

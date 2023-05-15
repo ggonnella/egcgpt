@@ -136,7 +136,7 @@
         "metadata":
         {
           "explain": "Nitrososphaera viennensis genome contains urease gene",
-          "quality": "excellent",
+          "quality": "excellent_split",
           "rule_id": "VA45"
         }
       },
@@ -154,7 +154,7 @@
         "metadata":
         {
           "explain": "Nitrososphaera viennensis genome contains urea transporter gene",
-          "quality": "excellent",
+          "quality": "excellent_split",
           "rule_id": "VA46"
         }
       },
@@ -172,7 +172,7 @@
         "metadata":
         {
           "explain": "\"Ca. Nitrososphaera gargensis\" genome contains urease gene",
-          "quality": "excellent",
+          "quality": "excellent_split",
           "rule_id": "VA45"
         }
       },
@@ -190,7 +190,7 @@
         "metadata":
         {
           "explain": "\"Ca. Nitrososphaera gargensis\" genome contains urea transporter gene",
-          "quality": "excellent",
+          "quality": "excellent_split",
           "rule_id": "VA46"
         }
       },
@@ -208,7 +208,7 @@
         "metadata":
         {
           "explain": "\"Ca. Cenarchaeum symbiosum\" genome contains urease gene",
-          "quality": "excellent",
+          "quality": "excellent_split",
           "rule_id": "VA45"
         }
       },
@@ -226,7 +226,7 @@
         "metadata":
         {
           "explain": "\"Ca. Cenarchaeum symbiosum\" genome contains urea transporter gene",
-          "quality": "excellent",
+          "quality": "excellent_split",
           "rule_id": "VA46"
         }
       }

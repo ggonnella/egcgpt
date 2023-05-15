@@ -57,6 +57,7 @@
         "metadata": {
           "explain": "Proteins in the dlt operon of Gram-positive bacteria contain PFAM motifs.",
           "quality": "poor",
+          "rule_id": null,
           "errors": ["incorrect_content", "wrong_comparison"],
           "notes": {"incorrect_content": "PFAM motifs is not a domain; in fact it is too generic to have a rule from it"}
         }
@@ -153,6 +154,7 @@
         "metadata": {
           "explain": "The remaining members of the Rickettsia genomes are degraded or absent in one or more species.",
           "quality": "poor",
+          "rule_id": null,
           "errors": ["incorrect_content", "missing_quantifier"],
           "notes": {"missing_quantifier": "in one or more species, thus 'some'",
                     "incorrect_content": "remaining members is not a gene"}
@@ -160,7 +162,7 @@
       }
     ],
     "counts": {
-      "excellent": 1,
+      "excellent": 2,
       "new_wrong": 1
     }
   },
@@ -192,6 +194,7 @@
         "metadata": {
           "explain": "The CRISPR subtype Nmeni, associated with vertebrate pathogens and commensals, contains the core proteins.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["invalid_group", "wrong_content", "wrong_comparison"]
         }
       },
@@ -221,6 +224,7 @@
         "metadata": {
           "explain": "The CRISPR subtype Nmeni, associated with vertebrate pathogens and commensals, contains the cas1 gene.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["invalid_group", "wrong_content", "wrong_comparison"]
         }
       },
@@ -250,6 +254,7 @@
         "metadata": {
           "explain": "The CRISPR subtype Nmeni, associated with vertebrate pathogens and commensals, contains the cas2 gene.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["invalid_group", "wrong_content", "wrong_comparison"]
         }
       },
@@ -279,12 +284,13 @@
         "metadata": {
           "explain": "The CRISPR subtype Nmeni, associated with vertebrate pathogens and commensals, contains the csn1 gene.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["invalid_group", "wrong_content", "wrong_comparison"]
         }
       }
     ],
     "counts": {
-      "junk": 4,
+      "new_wrong": 4,
       "missing": 1
     }
   },
@@ -317,6 +323,7 @@
           "explain": "Borrelia species have plasmid-encoded proteins involved in replication and compatibility, such as Pfam32 and Pfam49.",
           "errors": ["too_generic"],
           "quality": "good",
+          "rule_id": null,
           "notes": {"too_generic": "actually true, but this is way too obvious to be interesting"}
         }
       },
@@ -386,7 +393,8 @@
     "counts":
     {
       "good_joined": 2,
-      "good": 1
+      "good": 1,
+      "new_too_generic": 1
     }
   },
   "S85": {
@@ -482,6 +490,7 @@
           "explain": "GC skew analysis indicates that the ospAB and dbpAB operons were acquired horizontally by the LD lineage.",
           "quality": "junk",
           "errors": ["invalid_content_def"],
+          "rule_id": null,
           "note": {"invalid_content_def": "GC skew analysis is not a genome content; analysis is not a valid content type"}
         }
       }
@@ -550,13 +559,14 @@
         "metadata": {
           "explain": "There is a potential plasmid instability of blaNMC-A/IMI-type genes in other genera, as putatively shown for pIMI-5 in E. coli.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["invalid_content_def"],
           "notes": {"invalid_content_def": "plasmid instability is not a genome content; phenomenon is not a genome content type in the provided list"}
         }
       }
     ],
     "counts": {
-      "junk": 1,
+      "new_wrong": 1,
       "good": 1,
       "missing": 1
     }
@@ -628,6 +638,7 @@
           "explain": "The Octadecabacter genomes exhibit a high mutagenicity indicated by an unusually large number of pseudogenes.",
           "errors": ["incorrect_value"],
           "quality": "fair",
+          "rule_id": "V411",
           "notes": {"incorrect_value": "giving an exact number is wrong, correct is that the count is high"}
         }
       }
@@ -790,6 +801,7 @@
         "metadata": {
           "explain": "IMP-type metallo-β-lactamases have been reported mainly in East Asia, including Japan.",
           "quality": "junk",
+          "rule_id": null,
           "errors": ["wrong_comparison"],
           "notes": {"wrong_comparison": "presence cannot be compared to a group; also: the comparison East Asia to Japan is wrong"}
         }

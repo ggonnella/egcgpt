@@ -14,6 +14,7 @@
           "explain": "pyrophosphate-dependent 6-phosphofructokinase has been identified in Gammaproteobacteria",
           "quality": "poor",
           "errors": ["incorrect_group_def"],
+          "rule_id": null,
           "notes": {"incorrect_group_def": "too generic; the assertion in the text is limited to methanotrophic and thiotrophic Gammaproteobacteria"}
         }
       },
@@ -30,6 +31,7 @@
           "explain": "proton-translocating pyrophosphatase has been identified in Gammaproteobacteria",
           "quality": "poor",
           "errors": ["incorrect_group_def"],
+          "rule_id": null,
           "notes": {"incorrect_group_def": "too generic; the assertion in the text is limited to methanotrophic and thiotrophic Gammaproteobacteria"}
         }
       },
@@ -499,7 +501,7 @@
         "metadata":
         {
           "explain": "They are hypothesized to be able to use the AC-III, which is thought to be analogous to the bc1 complex, as well as a molybdopterin oxidoreductase (encoded by the actB gene) to facilitate Fe(II) oxidation",
-          "quality": "junk",
+          "quality": "junk_joined",
           "rule_id": ["VH352", "VH353"],
           "errors": ["invalid_comparison", "unknown_mode", "unknown_keys"]
         }

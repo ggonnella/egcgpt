@@ -30,18 +30,17 @@
       "good_split": 1,
       "good_joined": 2,
       "fair": 2,
-      "junk": 2,
-      "new_wrong": 1,
-      "missing": 6
+      "missing": 6,
+      "new_wrong": 3
     },
     "GPT3.5": {
-      "excellent": 4,
+      "excellent": 5,
       "good": 3,
       "good_joined": 2,
       "fair": 2,
       "poor_joined": 6,
-      "junk": 5,
-      "new_wrong": 4,
+      "new_wrong": 9,
+      "new_too_generic": 1,
       "missing": 5
     }
   },
